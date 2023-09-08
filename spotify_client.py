@@ -11,6 +11,7 @@ class SpotifyClient(object):
         self.api_token = self.get_api_token()
 
     def get_api_token(self):
+        # .env needs to be created with CLIENT_ID & CLIENT_SECRET
         load_dotenv()
         client_id = os.getenv("CLIENT_ID")
         client_secret = os.getenv("CLIENT_SECRET")
